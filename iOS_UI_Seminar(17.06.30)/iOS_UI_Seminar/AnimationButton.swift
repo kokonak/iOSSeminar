@@ -115,23 +115,6 @@ class AnimationButton: UIButton {
         bottomAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         self.bottomArrowLineLayer.add(bottomAnimation, forKey: "bottomAnimation")
         
-        //        let circleAnimation: CABasicAnimation = CABasicAnimation(keyPath: "strokeEnd")
-        //        circleAnimation.beginTime = CACurrentMediaTime() + duration * 2
-        //        circleAnimation.duration = duration * 2
-        //        circleAnimation.toValue = 1
-        //        circleAnimation.removedOnCompletion = false
-        //        circleAnimation.fillMode = kCAFillModeForwards
-        //        circleAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        //        self.circleMaskLayer.addAnimation(circleAnimation, forKey: "circleAnimation")
-        //
-        //        let rotateAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation")
-        //        rotateAnimation.beginTime = CACurrentMediaTime() + duration * 4
-        //        rotateAnimation.duration = 0.5
-        //        rotateAnimation.toValue = M_PI * 2
-        //        rotateAnimation.removedOnCompletion = false
-        //        rotateAnimation.fillMode = kCAFillModeForwards
-        //        rotateAnimation.repeatCount = MAXFLOAT
-        //        self.circleLayer.addAnimation(rotateAnimation, forKey: "rotateAnimation")
         
         let strokeEndAnimation: CABasicAnimation = CABasicAnimation(keyPath: "strokeEnd")
         strokeEndAnimation.duration = duration * 4

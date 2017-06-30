@@ -1,4 +1,5 @@
-//
+//  Reference : https://github.com/vinit5320/FliudLoadingIndicator/tree/master/Pods/BAFluidView
+
 //  PTFluidLayer.swift
 //  pita
 //
@@ -113,9 +114,6 @@ class PTFluidLayer: CAShapeLayer {
     }
     
     override func pauseAnimation() {
-//        let pausedTime = self.animationLayer.convertTime(CACurrentMediaTime(), fromLayer: nil)
-//        self.animationLayer.speed = 0
-//        self.animationLayer.timeOffset = pausedTime
         self.animationLayer.pauseAnimation()
     }
     override func resumeAnimation() {
@@ -125,12 +123,6 @@ class PTFluidLayer: CAShapeLayer {
         self.animationLayer.add(self.horizontalAnimation, forKey: horizontalAniString)
         
         self.animationLayer.resumeAnimation()
-//        let pausedTime = self.animationLayer.timeOffset
-//        self.animationLayer.speed = 1
-//        self.animationLayer.timeOffset = 0
-//        self.animationLayer.beginTime = 0
-//        let timeSincePause = self.animationLayer.convertTime(CACurrentMediaTime(), fromLayer: nil) - pausedTime
-//        self.animationLayer.beginTime = timeSincePause
     }
     
     
@@ -194,8 +186,6 @@ class PTFluidLayer: CAShapeLayer {
                     i += self.waveLength/2
                 }
                 
-//                line.addLineToPoint(CGPointMake(self.finalX, self.frame.height - self.maxAmplitude))
-//                line.addLineToPoint(CGPointMake(0, self.frame.height - self.maxAmplitude))
                 line.addLine(to: CGPoint(x: self.finalX, y: 0))
                 line.addLine(to: CGPoint(x: 0, y: 0))
                 line.close()
@@ -220,8 +210,6 @@ class PTFluidLayer: CAShapeLayer {
                     i += self.waveLength/2
                 }
                 
-//                line.addLineToPoint(CGPointMake(self.finalX, self.frame.height - self.maxAmplitude))
-//                line.addLineToPoint(CGPointMake(0, self.frame.height - self.maxAmplitude))
                 line.addLine(to: CGPoint(x: self.finalX, y: 0))
                 line.addLine(to: CGPoint(x: 0, y: 0))
                 line.close()
